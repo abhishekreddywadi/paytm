@@ -8,9 +8,11 @@ const AllUsers=()=>{
   useEffect(() => {
     axios.get("http://localhost:5000/api/v1/user/bulk?filter="+filter).then((response)=>{
       setUser(response.data.user)
-    },[filter])
+    },[])
   })
   const filteredUser = ()=>{
+    // Filter the user list on typing in the search bar
+    if(filter==="") return
     
     const filterdUser= user.filter((user)=>user.firstName.toLowerCase().includes(filter.toLowerCase()))
     setUser(filterdUser)

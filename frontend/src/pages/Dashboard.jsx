@@ -1,4 +1,3 @@
-import { useState } from "react";
 import AllUsers from "../components/AllUsers";
 import Balance from "../components/Balance";
 import Navbar from "../components/Navbar";
@@ -6,7 +5,7 @@ import Navbar from "../components/Navbar";
 
 function Dashboard() {
   // eslint-disable-next-line no-unused-vars
-  const [search ,setSearch]=useState("")
+
   // Search functionality here
  
   return (
