@@ -130,6 +130,7 @@ const userUpdate = async (req, res) => {
 const userBulkData = async (req, res) => {
   try {
     const filter = req.query.filter || "";
+    console.log(filter);
     const users = await userModel.find({
       $or: [
         { firstName: { $regex: filter } },

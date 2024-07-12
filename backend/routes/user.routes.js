@@ -13,5 +13,5 @@ const validator = require("../middleware/user.auth");
 userRoute.post("/signup", signup);
 userRoute.post("/signin", signin);
 userRoute.post("/update", validator, userUpdate);
-userRoute.post("/:filter", userBulkData);
+userRoute.get("/bulk", userBulkData);
 module.exports = userRoute;
